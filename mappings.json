@@ -1,0 +1,8 @@
+{
+  "buttons": {},
+  "selfChannel": 1,
+  "doubleSwitchButtons": {
+    "2": 2
+  },
+  "ctrlUpDoubleSwitch": 2
+}

@@ -1,0 +1,20 @@
+{
+  "buttons": {
+    "3": {
+      "note": "后退侧键 → Cmd+[（33 = '['，1048576 = Command）",
+      "keyCode": 33,
+      "flags": 1048576
+    },
+    "4": {
+      "note": "前进侧键 → Cmd+]（30 = ']'）",
+      "keyCode": 30,
+      "flags": 1048576
+    }
+  },
+  "selfChannel": 1,
+  "switchTarget": "B",
+  "doubleSwitchButtons": {
+    "2": 2
+  },
+  "ctrlUpDoubleSwitch": 2
+}

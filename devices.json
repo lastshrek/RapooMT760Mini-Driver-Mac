@@ -1,0 +1,8 @@
+{
+  "devices": [
+    { "name": "A", "channel": 1, "note": "2.4G 接收器" },
+    { "name": "B", "channel": 2, "note": "2.4G 接收器" },
+    { "name": "Windows", "channel": 3, "note": "蓝牙（示例，未验证）" },
+    { "name": "备用", "channel": 4, "note": "蓝牙（示例，未验证）" }
+  ]
+}

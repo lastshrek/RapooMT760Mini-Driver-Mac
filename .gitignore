@@ -1,0 +1,19 @@
+# macOS 构建产物
+rapookeys
+rapookeys-arm64
+rapookeys-x86_64
+RapooKeys.app/
+Applications/
+pkgbuild-root/
+rapookeys-deploy/
+*.pkg
+*.zip
+mode.tmp
+
+# Windows / Python
+windows-tray/__pycache__/
+*.pyc
+
+# 系统与编辑器
+.DS_Store
+.workbuddy/
