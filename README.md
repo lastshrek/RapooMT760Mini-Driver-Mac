@@ -44,9 +44,14 @@ ba a5 ae 00 00 00 00 [信道] 00 00 ...
 | `MT760-A.pkg` | 主机 A：本机在信道 1，双击切到信道 2 |
 | `MT760-B.pkg` | 副机 B：本机在信道 2，双击切回信道 1 |
 
+> 这两个包由 `./build_pkg.sh` 生成，仓库里不放二进制；也可以看 Releases（如果作者上传了）。
+> 需要改设备信道时：`./build_pkg.sh` 里的两个调用参数是 `角色 本机信道 目标信道`。
+
 双击安装 → 因为安装包没有 Developer ID Installer 签名，首次需在「系统设置 → 隐私与安全性」里点**仍要打开**。安装完会自动启动菜单栏图标。
 
 ### 方式二：解压即用
+
+先 `./package.sh` 生成 `rapookeys-deploy.zip`，再：
 
 ```bash
 unzip rapookeys-deploy.zip
