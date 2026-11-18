@@ -39,26 +39,29 @@ ba a5 ae 00 00 00 00 [信道] 00 00 ...
 
 ### 方式一：安装包（推荐）
 
+从 [Releases](https://github.com/lastshrek/RapooMT760Mini-Driver-Mac/releases/latest) 下载：
+
 | 文件 | 用途 |
 |---|---|
 | `MT760-A.pkg` | 主机 A：本机在信道 1，双击切到信道 2 |
 | `MT760-B.pkg` | 副机 B：本机在信道 2，双击切回信道 1 |
+| `rapookeys-deploy.zip` | 免安装解压版（含 App + Windows 托盘工具 + 部署脚本） |
 
-> 这两个包由 `./build_pkg.sh` 生成，仓库里不放二进制；也可以看 Releases（如果作者上传了）。
-> 需要改设备信道时：`./build_pkg.sh` 里的两个调用参数是 `角色 本机信道 目标信道`。
+双击安装 → 因为安装包没有 Developer ID Installer 签名，首次会被拦下，去「系统设置 → 隐私与安全性」点**仍要打开**（或右键 `MT760-A.pkg` → 打开）。安装完会自动启动菜单栏图标。
 
-双击安装 → 因为安装包没有 Developer ID Installer 签名，首次需在「系统设置 → 隐私与安全性」里点**仍要打开**。安装完会自动启动菜单栏图标。
+> 想自己出包：`./build_pkg.sh` 一次生成 A/B 两个包，脚本末尾两行参数是 `角色 本机信道 目标信道`，设备清单读 `devices.json`。
 
 ### 方式二：解压即用
 
-先 `./package.sh` 生成 `rapookeys-deploy.zip`，再：
+下载 `rapookeys-deploy.zip` 解压（或本地 `./package.sh` 生成），然后：
 
 ```bash
-unzip rapookeys-deploy.zip
 cd rapookeys-deploy
-./step1-allow-app.sh   # 打开授权面板
+./step1-allow-app.sh   # 解除隔离 + 打印本机接收器身份
 ./step2-menubar.sh     # 启动菜单栏组件
 ```
+
+也可以直接双击 `启动MT760.command`。
 
 ### 首次必须授权两项
 
